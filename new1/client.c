@@ -7,6 +7,7 @@
 #include <sys/socket.h> 
 #include <sys/types.h> 
 #include <unistd.h> 
+#include "ram.h"
 
 #define IP_PROTOCOL 0 
 #define IP_ADDRESS "127.0.0.1" // localhost 
@@ -40,7 +41,10 @@ int recvFile(char* buf, int s)
 		if (ch == EOF) 
 			return 1; 
 		else
-			printf("%c", ch); 
+			//printf("%d", ch); 
+main1(ch);
+		//	printf("%c", main1(ch)); 
+
 	} 
 	return 0; 
 } 
@@ -74,6 +78,7 @@ int main()
 			addrlen); 
 
 		printf("\n---------Data Received---------\n"); 
+		
 
 		while (1) { 
 			// receive 
@@ -91,4 +96,3 @@ int main()
 	} 
 	return 0; 
 } 
-
