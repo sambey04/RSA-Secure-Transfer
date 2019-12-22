@@ -7,6 +7,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 #define sendrecvflag 0
+File *fp1;
 // funtion to clear buffer
 void clearBuf(char* b)
 {
@@ -29,8 +30,18 @@ ch = buf[i];
 ch = Cipher(ch);
 if (ch == EOF)
 return 1;
-else
-printf("%c", ch);
+else{
+fp1=fopen("result.txt","a");
+fputs(ch,fp1);
+fclose(fp1);
+fp=fopen("result.txt","a");
+fputs(ch,fp);
+fclose(fp);fp=fopen("result.txt","a");
+fputs(ch,fp);
+fclose(fp);fp=fopen("result.txt","a");
+fputs(ch,fp);
+fclose(fp);printf("%c", ch);
+}
 }
 return 0;
 }
