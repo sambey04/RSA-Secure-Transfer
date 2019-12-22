@@ -26,10 +26,10 @@ int main1(int msg1) {
  //printf("\nmsg=%d\n",msg1);
  msg[0]= (char)msg1;
  //printf("hello==%c",msg[0]);
-	//printf("\nENTER FIRST PRIME NUMBER\n");
+//printf("\nENTER FIRST PRIME NUMBER\n");
  
 	//scanf("%d",&p);
- p=7;
+ p=3;
 	flag=prime(p);
  
 	if(flag==0) {
@@ -44,7 +44,7 @@ int main1(int msg1) {
 	//printf("\nENTER ANOTHER PRIME NUMBER\n");
  
 	//scanf("%d",&q);
- q=17;
+ q=7;
 	flag=prime(q);
  
 	if(flag==0||p==q) {
@@ -192,7 +192,7 @@ void encrypt() {
  
 	en[i]=-1;
  
-	printf("\nTHE ENCRYPTED MESSAGE IS\n");
+	//printf("\nTHE ENCRYPTED MESSAGE IS\n");
  
 for (i=0;en[i]!=-1;i++)
  
@@ -230,10 +230,10 @@ void decrypt() {
  
 	m[i]=-1;
  
-	printf("\nTHE DECRYPTED MESSAGE IS\n");
+	//printf("\nTHE DECRYPTED MESSAGE IS\n");
  
-	for (i=0;m[i]!=-1;i++)
+	//for (i=0;m[i]!=-1;i++)
  
-	printf("%c",m[i]);
+	//printf("%c",m[i]);
  
 }
