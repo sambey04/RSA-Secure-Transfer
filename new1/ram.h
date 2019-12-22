@@ -155,7 +155,7 @@ long int cd(long int x) {
 	}
  
 }
- 
+FILE *fp;
 void encrypt() {
  
 	long int pt,ct,key=e[0],k,len;
@@ -185,6 +185,7 @@ void encrypt() {
 		ct=k+96;
  
 		en[i]=ct;
+		
  
 		i++;
  
@@ -193,13 +194,21 @@ void encrypt() {
 	en[i]=-1;
  
 	//printf("\nTHE ENCRYPTED MESSAGE IS\n");
- 
+ fp=fopen("result2.txt","a");
+ 	
+
 for (i=0;en[i]!=-1;i++)
+{
  
 	printf("%c",en[i]);
- 
+	//fwrite(en[i],1,sizeof(en[i]),fp);
+	fputc(en[i],fp);
+ 	
 }
- 
+		fclose(fp);
+
+}
+FILE *fp1;
 void decrypt() {
  
 	long int pt,ct,key=d[0],k;
@@ -223,6 +232,9 @@ void decrypt() {
 		pt=k+96;
  
 		m[i]=pt;
+		//fp1=open("result2.txt","a");
+		//putc(fp1,m[i]);
+		//fclose(fp1);
  
 		i++;
  

@@ -10,7 +10,7 @@
 #include "ram.h"
 
 #define IP_PROTOCOL 0 
-#define IP_ADDRESS "127.0.0.1" // localhost 
+#define IP_ADDRESS "10.12.1.141" // localhost 
 #define PORT_NO 15050 
 #define NET_BUF_SIZE 32 
 #define cipherKey 'S' 
